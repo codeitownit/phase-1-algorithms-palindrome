@@ -1,16 +1,18 @@
 function isPalindrome(word) {
-    // reverse the input string
-    const reversedWord = reverseString(word);
-    // compare the reversed string to the input
-    return word === reversedWord;
-  
-}
-function reverseString(word) {
-  return word.split("").reverse().join("");
+  function reverseString(word) {
+    return word.split("").reverse().join("");
+  }
+// converting the word to lowercase
+const newWord = word.toLowerCase();
+// reverse the input string
+const reversedWord = reverseString(newWord);
+// compare the reversed string to the input
+return word === reversedWord;
+
 }
 /* 
   Add your pseudocode here
-
+      change the input to lowercase
       reverse the input string
       if the reversed string is the same as the input
         return true
@@ -21,6 +23,7 @@ function reverseString(word) {
   Add written explanation of your solution here
     Take the input string
     create an array from the input string
+    change the input string to lowercase
     reverse the array
     create a string from the reversed array
     return the reversed string
